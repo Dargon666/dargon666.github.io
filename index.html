@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Games</title>
+  <style>
+    :root { --bg: #0f1117; --card: #1a1d27; --text: #e8e8f0; --muted: #9a9cb0; --accent: #6c8cff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: system-ui, sans-serif;
+      background: var(--bg); color: var(--text);
+      display: flex; flex-direction: column; align-items: center; padding: 48px 16px;
+    }
+    h1 { margin: 0 0 8px; font-size: 2.2rem; }
+    p.sub { margin: 0 0 32px; color: var(--muted); }
+    .grid {
+      display: grid; gap: 16px; width: 100%; max-width: 900px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    a.card {
+      display: block; padding: 20px; border-radius: 12px; text-decoration: none;
+      background: var(--card); color: var(--text); border: 1px solid transparent;
+      transition: transform .15s, border-color .15s;
+    }
+    a.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card h2 { margin: 0 0 6px; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <h1>My Games</h1>
+  <p class="sub">Pick a game to play</p>
+
+  <div class="grid">
+    <!-- One card per game. href = "/<repo-name>/" -->
+    <a class="card" href="/game-one/">
+      <h2>Game One</h2>
+      <p>Short description of the game.</p>
+    </a>
+    <a class="card" href="/game-two/">
+      <h2>Game Two</h2>
+      <p>Short description of the game.</p>
+    </a>
+    <a class="card" href="/game-three/">
+      <h2>Game Three</h2>
+      <p>Short description of the game.</p>
+    </a>
+  </div>
+</body>
+</html>
